@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
-var i2c = require('i2c-bus'),
-  i2c1 = i2c.openSync(1);
+var i2c = require('i2c-bus')
+var Pca9685Driver = require("pca9685").Pca9685Driver;
 
 app.get('/', function (req, res) {
   res.send('Hello World!')

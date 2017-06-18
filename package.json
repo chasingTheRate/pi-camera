@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "sudo nodemon server.js"
+    "start": "sudo node server.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,8 @@
   "homepage": "https://github.com/chasingTheRate/pi-camera#readme",
   "dependencies": {
     "express": "^4.15.3",
-    "i2c-bus": "^1.2.2"
+    "i2c-bus": "^1.2.2",
+    "pca9685": "^4.0.3"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
