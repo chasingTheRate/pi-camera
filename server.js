@@ -63,12 +63,12 @@ app.get('/', function (req, res) {
 
 app.get('/left', function (req, res) {
   res.send('Left')
-  pwm.setPulseLength(0, 500);
+  pwm.setPulseLength(0, 600);
 })
 
 app.get('/right', function (req, res) {
   res.send('Right')
-  pwm.setPulseLength(0, 2300);
+  pwm.setPulseLength(0, 2500);
 })
 
 app.listen(3000, function () {
