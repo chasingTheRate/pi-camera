@@ -19,6 +19,7 @@ class Driver {
       }
       console.log("Initialization done");
     });
+    this.test = 'test';
   }
 }
 

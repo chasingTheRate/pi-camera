@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
-const Driver = require('./classes/Driver.js');
+const { Driver } = require('./classes/Driver.js');
 
 let driver = new Driver();
-
+console.log(driver.test);
 // var options = {
 //     i2c: i2cBus.openSync(1),
 //     address: 0x40,
