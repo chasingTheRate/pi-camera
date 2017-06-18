@@ -12,14 +12,30 @@ class Driver {
         debug: false
     };
 
+    this.horizontalChannel = 0;
+    this.verticalChannel = 3;
+
+    this.horizontalPulseLength = 1500;
+    this.verticalPulseLength = 1500;
+
     this.pwm = new Pca9685Driver(options, function(err) {
       if (err) {
           console.error("Error initializing PCA9685");
           process.exit(-1);
       }
       console.log("Initialization done");
+      setInitialPosition()
     });
     this.test = 'test';
+  }
+
+  setInitialPosition(){
+    setChannelPulseLength(this.horizontalChannel, 1500);
+    setChannelPulseLength(this.verticalChannel, 1500);
+  }
+
+  setChannelPulseLength(channel, pulseLength){
+    this.setPulseLength(channel, pulseLength);
   }
 }
 
