@@ -24,7 +24,7 @@ class Driver {
           process.exit(-1);
       }
       console.log("Initialization done");
-      setInitialPosition()
+      this.setInitialPosition()
     });
     this.test = 'test';
   }
