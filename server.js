@@ -59,21 +59,22 @@ pwm = new Pca9685Driver(options, function(err) {
 app.get('/', function (req, res) {
   res.send('Center')
   pwm.setPulseLength(0, 1500);
+  pwm.setPulseLength(3, 1500);
 })
 
 app.get('/right', function (req, res) {
   res.send('Right')
-  pwm.setPulseLength(0, 600);
+  pwm.setPulseLength(0, 500);
 })
 
 app.get('/left', function (req, res) {
   res.send('Left')
-  pwm.setPulseLength(0, 2400);
+  pwm.setPulseLength(0, 2500);
 })
 
 app.get('/up', function (req, res) {
   res.send('up')
-  pwm.setPulseLength(3, 800);
+  pwm.setPulseLength(3, 1000);
 })
 
 app.get('/down', function (req, res) {
