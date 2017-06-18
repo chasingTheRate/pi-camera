@@ -31,12 +31,12 @@ class Driver {
   }
 
   setInitialPosition(){
-    setChannelPulseLength(this.horizontalChannel, 1500);
-    setChannelPulseLength(this.verticalChannel, 1500);
+    this.setChannelPulseLength(this.horizontalChannel, 1500);
+    this.setChannelPulseLength(this.verticalChannel, 1500);
   }
 
   setChannelPulseLength(channel, pulseLength){
-    this.setPulseLength(channel, pulseLength);
+    this.pwm.setPulseLength(channel, pulseLength);
   }
 }
 
