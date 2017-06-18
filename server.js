@@ -45,28 +45,26 @@ console.log(driver.test);
 
 app.get('/', function (req, res) {
   res.send('Center')
-  pwm.setPulseLength(0, 1500);
-  pwm.setPulseLength(3, 1000);
 })
 
 app.get('/right', function (req, res) {
   res.send('Right')
-  pwm.setPulseLength(0, 600);
+  driver.setPulseLength(0, 600);
 })
 
 app.get('/left', function (req, res) {
   res.send('Left')
-  pwm.setPulseLength(0, 2500);
+  driver.setPulseLength(0, 2500);
 })
 
 app.get('/up', function (req, res) {
   res.send('up')
-  pwm.setPulseLength(3, 1000);
+  driver.setPulseLength(3, 1000);
 })
 
 app.get('/down', function (req, res) {
   res.send('Down')
-  pwm.setPulseLength(3, 2500);
+  driver.setPulseLength(0, 2500);
 })
 
 app.listen(3000, function () {

@@ -33,11 +33,11 @@ class Driver {
   setInitialPosition(){
     this.setChannelPulseLength(this.horizontalChannel, 1500);
     this.setChannelPulseLength(this.verticalChannel, 1500);
-  }
+  };
 
   setChannelPulseLength(channel, pulseLength){
     this.pwm.setPulseLength(channel, pulseLength);
-  }
+  };
 }
 
 exports.Driver = Driver;
