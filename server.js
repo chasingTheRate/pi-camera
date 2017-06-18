@@ -6,7 +6,7 @@ var Pca9685Driver = require("pca9685").Pca9685Driver;
 var options = {
     i2c: i2cBus.openSync(1),
     address: 0x40,
-    frequency: 50,
+    frequency: 60,
     debug: false
 };
 
@@ -16,24 +16,16 @@ pwm = new Pca9685Driver(options, function(err) {
         process.exit(-1);
     }
     console.log("Initialization done");
-
-    // Set channel 0 to turn on on step 42 and off on step 255
-    // (with optional callback)
-    pwm.setPulseRange(0, 42, 255, function() {
-        if (err) {
-            console.error("Error setting pulse range.");
-        } else {
-            console.log("Pulse range set.");
-        }
-    });
-
-    // Set the pulse length to 1500 microseconds for channel 2
-    pwm.setPulseLength(0, 1500);
-    pwm.setPulseLength(3, 1500);
 });
 
-app.get('/', function (req, res) {
-  res.send('Hello World!')
+app.get('/left', function (req, res) {
+  res.send('left')
+  pwm.setPulseLength(0, 600);
+})
+
+app.get('/right', function (req, res) {
+  res.send('right')
+  pwm.setPulseLength(0, 250);
 })
 
 app.listen(3000, function () {
