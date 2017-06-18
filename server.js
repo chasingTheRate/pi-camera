@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-var i2c = require('i2c-bus')
+var i2cBus = require('i2c-bus')
 var Pca9685Driver = require("pca9685").Pca9685Driver;
 
 var options = {
