@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "sudo node server.js"
+    "start": "npm install sudo node server.js"
   },
   "repository": {
     "type": "git",
