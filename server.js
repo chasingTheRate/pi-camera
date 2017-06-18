@@ -49,22 +49,22 @@ app.get('/', function (req, res) {
 
 app.get('/right', function (req, res) {
   res.send('Right')
-  driver.setPulseLength(0, 600);
+  driver.setChannelPulseLength(0, 600);
 })
 
 app.get('/left', function (req, res) {
   res.send('Left')
-  driver.setPulseLength(0, 2500);
+  driver.setChannelPulseLength(0, 2500);
 })
 
 app.get('/up', function (req, res) {
   res.send('up')
-  driver.setPulseLength(3, 1000);
+  driver.setChannelPulseLength(3, 1000);
 })
 
 app.get('/down', function (req, res) {
   res.send('Down')
-  driver.setPulseLength(0, 2500);
+  driver.setChannelPulseLength(0, 2500);
 })
 
 app.listen(3000, function () {
