@@ -64,7 +64,7 @@ app.get('/up', function (req, res) {
 
 app.get('/down', function (req, res) {
   res.send('Down')
-  driver.setChannelPulseLength(0, 2500);
+  driver.setChannelPulseLength(3, 2500);
 })
 
 app.listen(3000, function () {
