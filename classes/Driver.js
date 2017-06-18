@@ -18,14 +18,15 @@ class Driver {
     this.horizontalPulseLength = 1500;
     this.verticalPulseLength = 1500;
 
+    const a = this;
     this.pwm = new Pca9685Driver(options, function(err) {
       if (err) {
           console.error("Error initializing PCA9685");
           process.exit(-1);
       }
       console.log("Initialization done");
-      this.setInitialPosition()
-    }).bind(this);
+      a.setInitialPosition();
+    });
     this.test = 'test';
   }
 
