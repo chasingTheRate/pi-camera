@@ -28,7 +28,8 @@ pwm = new Pca9685Driver(options, function(err) {
     });
 
     // Set the pulse length to 1500 microseconds for channel 2
-    pwm.setPulseLength(2, 1500);
+    pwm.setPulseLength(0, 600);
+    pwm.setPulseLength(3, 600);
 
     // Set the duty cycle to 25% for channel 8
     pwm.setDutyCycle(8, 0.25);
@@ -57,6 +58,7 @@ pwm = new Pca9685Driver(options, function(err) {
 
 app.get('/', function (req, res) {
   res.send('Hello World!')
+  pwm.setPulseLength(0, 600);
 })
 
 app.listen(3000, function () {
