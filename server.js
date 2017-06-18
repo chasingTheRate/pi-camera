@@ -28,23 +28,8 @@ pwm = new Pca9685Driver(options, function(err) {
     });
 
     // Set the pulse length to 1500 microseconds for channel 2
-    pwm.setPulseLength(2, 1500);
-
-    // Set the duty cycle to 25% for channel 8
-    pwm.setDutyCycle(8, 0.25);
-
-    // Turn off all power to channel 6
-    // (with optional callback)
-    pwm.channelOff(6, function() {
-        if (err) {
-            console.error("Error turning off channel.");
-        } else {
-            console.log("Channel 6 is off.");
-        }
-    });
-
-    // Turn on channel 3 (100% power)
-    pwm.channelOn(3);
+    pwm.setPulseLength(0, 1500);
+    pwm.setPulseLength(3, 1500);
 });
 
 app.get('/', function (req, res) {
