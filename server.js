@@ -63,7 +63,7 @@ app.get('/', function (req, res) {
 
 app.get('/right', function (req, res) {
   res.send('Right')
-  pwm.setPulseLength(0, 700);
+  pwm.setPulseLength(0, 600);
 })
 
 app.get('/left', function (req, res) {
@@ -73,12 +73,12 @@ app.get('/left', function (req, res) {
 
 app.get('/up', function (req, res) {
   res.send('up')
-  pwm.setPulseLength(3, 700);
+  pwm.setPulseLength(3, 800);
 })
 
 app.get('/down', function (req, res) {
   res.send('Down')
-  pwm.setPulseLength(3, 2400);
+  pwm.setPulseLength(3, 2500);
 })
 
 app.listen(3000, function () {
