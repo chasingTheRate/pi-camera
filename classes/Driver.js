@@ -21,3 +21,5 @@ class Driver {
     });
   }
 }
+
+exports.Driver = Driver;
