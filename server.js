@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
-var i2cBus = require("i2c-bus");
+var i2c = require('i2c-bus'),
+  i2c1 = i2c.openSync(1);
 
 app.get('/', function (req, res) {
   res.send('Hello World!')
