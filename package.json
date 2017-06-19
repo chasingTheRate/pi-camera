@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/chasingTheRate/pi-camera#readme",
   "dependencies": {
+    "cors": "^2.8.3",
     "express": "^4.15.3",
     "i2c-bus": "^1.2.2",
     "pca9685": "^4.0.3"

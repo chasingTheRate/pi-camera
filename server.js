@@ -1,8 +1,12 @@
 const express = require('express');
 const app = express();
+var cors = require('cors');
+
 const { Driver } = require('./classes/Driver.js');
 
 let driver = new Driver();
+
+app.use(cors());
 
 app.get('/', function (req, res) {
   res.send('Center')
