@@ -28,6 +28,10 @@ app.get('/down', function (req, res) {
   driver.setChannelPulseLength(3, 2500);
 })
 
+app.post('/test', function (req, res) {
+  console.log('test');
+})
+
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
 })
