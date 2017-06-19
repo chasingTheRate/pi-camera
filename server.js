@@ -3,45 +3,6 @@ const app = express();
 const { Driver } = require('./classes/Driver.js');
 
 let driver = new Driver();
-console.log(driver.test);
-// var options = {
-//     i2c: i2cBus.openSync(1),
-//     address: 0x40,
-//     frequency: 50,
-//     debug: false
-// };
-//
-// pwm = new Pca9685Driver(options, function(err) {
-//     if (err) {
-//         console.error("Error initializing PCA9685");
-//         process.exit(-1);
-//     }
-//     console.log("Initialization done");
-//
-//     // Set the duty cycle to 25% for channel 8
-//     pwm.setDutyCycle(8, 0.25);
-//
-//     // Turn off all power to channel 6
-//     // (with optional callback)
-//     pwm.channelOff(0, function() {
-//         if (err) {
-//             console.error("Error turning off channel.");
-//         } else {
-//             console.log("Channel 0 is off.");
-//         }
-//     });
-//
-//     pwm.channelOff(3, function() {
-//         if (err) {
-//             console.error("Error turning off channel.");
-//         } else {
-//             console.log("Channel 3 is off.");
-//         }
-//     });
-//
-//     // Turn on channel 3 (100% power)
-//     //pwm.channelOn(3);
-// });
 
 app.get('/', function (req, res) {
   res.send('Center')

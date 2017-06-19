@@ -30,14 +30,22 @@ class Driver {
     this.test = 'test';
   }
 
-  setInitialPosition(){
+  setInitialPosition()
+  {
     this.setChannelPulseLength(this.horizontalChannel, 1500);
     this.setChannelPulseLength(this.verticalChannel, 1500);
   };
 
-  setChannelPulseLength(channel, pulseLength){
+  setChannelPulseLength(channel, pulseLength)
+  {
     this.pwm.setPulseLength(channel, pulseLength);
   };
+
+  panByStepIncrement(stepObj) // { horizontalIncrement : 10, verticalIncrement : 10 }
+  {
+    setChannelPulseLength(this.horizontalChannel, this.horizontalPulseLength + stepObj.horizontalIncrement);
+    setChannelPulseLength(this.verticalChannel, this.verticalPulseLength + stepObj.verticalIncrement);
+  }
 }
 
 exports.Driver = Driver;
